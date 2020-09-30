@@ -29,7 +29,7 @@
 #define sort_hpp
 
 #include <algorithm> // for swap()
-
+#include <iostream>
 using namespace std;
 
 namespace csi281 {
@@ -39,21 +39,18 @@ namespace csi281 {
     template <typename T>
     void bubbleSort(T array[], const int length) {
         // YOUR CODE HERE
-        int i, temp,j = 0;
+        int i, temp, j = 0;
         for (i = 0; i < length - 1; i++)
         {
-            for (j= 0; j < length - i - 1; j++)
+            for (j = 0; j < length - i - 1; j++)
             {
                 if (array[j] > array[j + 1])
                 {
-                    temp = array[i]
-                        array[i] = array[j]
-                        array[j] = temp;
-
+                    swap(array[j], array[j + 1]);
                 }
             }
         }
-    };
+    }
 
     // Performs an in-place ascending sort of *array* of size *length*
     // using the selection sort algorithm
@@ -70,27 +67,31 @@ namespace csi281 {
                 swap(array[i], array[min]);
             }
         }
-    };
+    }
 
     // Performs an in-place ascending sort of *array* of size *length*
     // using the insertion sort algorithm
     template <typename T>
     void insertionSort(T array[], const int length) {
         // YOUR CODE HERE
-        int i, temp, j;
-        for (i = 1; i < length; i++)
+        int i = 1;
+        int j = i - 1;
+        int key = T array[i];
+        for (int i; i < length; i++)
         {
-            temp = array[i]
-                j = i - 1;
-            while (j >= 0 && array[j] > temp)
-            {
+            
+        
+            while (key < array[j] && j >= 0) {
                 array[j + 1] = array[j];
-                j = j - 1;
+
+                j--;
             }
-            array[j + 1] = temp;
+            array[j + 1] = key;
         }
-    };
+    }
 };
 
-
 #endif /* sort_hpp */
+
+
+
