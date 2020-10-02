@@ -1,0 +1,14 @@
+1. 
+Bubble sort is slower than Selection Sort and Insertion Sort, because in Bubble Sort it takes another run through to determine if its sorted and does N comparsions on every pass
+where with searches like Selection Sort and Insertion Sort it moves past the sorted part of the array in order to finish sorting the rest of the unsorted part. This makes it so as
+the array gets larger Bubble Sort becomes less and less effiecent 
+2.
+A optimized Insertion Sort is faster than a Selection Sort because at most a Selection Sort will only move each element once as well Insertion Sort wont change the order of elements
+with equal keys therefore making less passes and faster overall.
+3.
+In order to complete the 3 sorting methods that will implemented you have to know the length of the array before the method begins, as it as normal array and not a vector, the memory
+has to be allocated beforehand to manage the array. Therefore as we use the concept #include <algorithm> in order to make the swaps required we also need to make sure that the swaps can 
+occur with the right amount of allocated space in the complier 
+4.
+std::Sort it generally faster because it combines the best elements of other sorts like QuickSort and Insertion Sort in order to perform the best way for any type of sorting. Therefore
+because it includes elements of other sorting methods it is fundmental just better than other sorting implementations

@@ -64,6 +64,9 @@ namespace csi281 {
             {
                 if (array[j] < array[min])
                     min = j;
+            }
+            if (min != i )
+            {
                 swap(array[i], array[min]);
             }
         }
@@ -76,12 +79,12 @@ namespace csi281 {
         // YOUR CODE HERE
         int i = 1;
         int j = i - 1;
-        int key = T array[i];
-        for (int i; i < length; i++)
+        int key = i;
+        for (i=1; i < length; i++)
         {
-            
+            array[i] = key;
         
-            while (key < array[j] && j >= 0) {
+            while (key < j && j >= 0) {
                 array[j + 1] = array[j];
 
                 j--;
